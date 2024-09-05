@@ -1,0 +1,11 @@
+﻿<h2>Customer Details</h2>
+<p><strong>First Name:</strong> @Model.Customer.FirstName</p>
+<p><strong>Email:</strong> @Model.Customer.Email</p>
+
+<h3>Order List</h3>
+<ul>
+    @foreach (var order in Model.Orders)
+    {
+        <li>@order.ProductName - @order.Price.ToString("C")</li>
+    }
+</ul>
